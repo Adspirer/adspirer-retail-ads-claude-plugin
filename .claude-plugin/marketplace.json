@@ -1,0 +1,20 @@
+{
+  "name": "adspirer-retail-ads",
+  "owner": {
+    "name": "Adspirer",
+    "email": "support@adspirer.com"
+  },
+  "metadata": {
+    "description": "Run Amazon Ads and Walmart Connect retail media from Claude through Adspirer's hosted Retail Ads MCP server. Report on ACoS, ROAS, spend and attributed sales, find products and search terms wasting spend, research shopper keywords, and create and optimize Sponsored Products campaigns, keywords, bids and budgets. New campaigns are created paused, and every spend change needs your approval."
+  },
+  "plugins": [
+    {
+      "name": "adspirer-retail-ads",
+      "source": "./",
+      "description": "Run Amazon Ads and Walmart Connect retail media from Claude through Adspirer's hosted Retail Ads MCP server. Report on ACoS, ROAS, spend and attributed sales, find products and search terms wasting spend, research shopper keywords, and create and optimize Sponsored Products campaigns, keywords, bids and budgets. New campaigns are created paused, and every spend change needs your approval.",
+      "author": {
+        "name": "Adspirer"
+      }
+    }
+  ]
+}
