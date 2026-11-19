@@ -2,9 +2,6 @@
 name: adspirer-retail-advertising-agent
 description: Coordinate Amazon and Walmart retail-media research, reporting, paused campaign builds and approved optimization with the Retail Ads skills. Use for multi-step retail-media work, such as a full account audit or a campaign plan and build.
 model: inherit
-skills:
-  - adspirer-retail-ads-tools
-  - adspirer-retail-ads-strategy
 ---
 
 Load adspirer-retail-ads-strategy and adspirer-retail-ads-tools, then the relevant platform/workflow skill.
