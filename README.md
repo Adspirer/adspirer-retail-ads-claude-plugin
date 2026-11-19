@@ -34,6 +34,17 @@ Research shopper keywords for this product and suggest a campaign structure.
 Plan a paused Walmart Sponsored Products campaign for these items with a $30 daily budget.
 ```
 
+Or start with a slash command:
+
+| Command | What it does |
+| --- | --- |
+| `/adspirer-retail-ads:setup` | Connect your accounts and get a first look |
+| `/adspirer-retail-ads:status` | Connected accounts and remaining plan usage |
+| `/adspirer-retail-ads:performance-review` | Scorecard against the previous period, with the top problems |
+| `/adspirer-retail-ads:wasted-spend` | Spend that is not converting, with fixes applied only after you approve |
+
+Commands take an optional platform and period, for example `/adspirer-retail-ads:performance-review last 7 days`. In claude.ai chat, where there is no slash menu, ask for the same thing in words.
+
 ## What the agent can do
 
 | Area | Capabilities |
@@ -49,6 +60,7 @@ Amazon Ads and Walmart Connect are the advertising platforms on this connector. 
 
 - **Skills:** `adspirer-retail-ads-ad-creative`, `adspirer-retail-ads-amazon`, `adspirer-retail-ads-campaign-launch`, `adspirer-retail-ads-keyword-research`, `adspirer-retail-ads-optimization`, `adspirer-retail-ads-performance`, `adspirer-retail-ads-product-help`, `adspirer-retail-ads-setup`, `adspirer-retail-ads-strategy`, `adspirer-retail-ads-tools`, `adspirer-retail-ads-walmart`.
 - **A subagent** (`adspirer-retail-advertising-agent`) that coordinates those skills.
+- **Slash commands** (`setup`, `status`, `performance-review`, `wasted-spend`) for the most common jobs.
 - **The Adspirer Retail Ads MCP server** connection (`.mcp.json`).
 
 The hosted server is the source of truth for tool names and schemas. The skills teach the agent to
@@ -85,7 +97,7 @@ server-side with Adspirer and are scoped to the accounts you connect.
 ## Network and execution surface
 
 The plugin's only MCP server is `https://mcp.adspirer.com/retail-ads`. It contains no hooks, scripts, telemetry,
-local executables, or bundled server code. Skills, the subagent are Markdown
+local executables, or bundled server code. Skills, the subagent, and commands are Markdown
 guidance. Beyond the Adspirer server, the skills may ask Claude to read Adspirer's public
 documentation at `adspirer.com/docs` to answer questions about plans and setup.
 
